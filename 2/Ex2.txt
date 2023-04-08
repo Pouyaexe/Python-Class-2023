@@ -1,0 +1,33 @@
+1-String Manipulation: Write a Python program that takes a string and prints out the string in reverse order.
+Example:
+Input: "Hello World!"
+Output: "!dlroW olleH"
+
+2-TypeCasting: Write a Python program that takes two numbers as strings, converts them to integers, adds them together, and then prints out the result.
+Example:
+Input: "10", "20"
+Output: 30
+
+3-Boolean and Operators: Write a Python program that checks whether a given age is eligible for voting. The age limit is 18 years or older.
+Example:
+Input: 20
+Output: True
+
+4-String and Operators: Write a Python program that concatenates two strings using the + operator.
+Example:
+Input: "Hello", "World!"
+Output: "Hello World!"
+
+5-TypeCasting and Operators: Write a Python program that takes two numbers as strings, converts them to integers, and then performs the following operations: addition, subtraction, multiplication, and division.
+Example:
+Input: "10", "5"
+Output:
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2.0
+
+6-Boolean and Operators: Write a Python program that checks whether a given username and password are valid. If the username is "admin" and the password is "password123", then the program should print out "Access granted". Otherwise, the program should print out "Access denied".
+Example:
+Input: Username="admin", Password="password123"
+Output: "Access granted"
