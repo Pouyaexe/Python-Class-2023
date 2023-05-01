@@ -12,6 +12,8 @@ first letter of each string or all letters.
 
 
 """
+
+
 def sum_even(lst, include_odd=False):
     """takes a list of numbers and returns the sum of all the even numbers in the list.
 
@@ -31,16 +33,14 @@ def sum_even(lst, include_odd=False):
     return sum
 
 
-
 def capitalize_strings(lst, capitalize_all=False):
-    """takes a list of strings and returns a new list with all the strings capitalized.
-
+    """
     Args:
         lst (list): list of strings
-        capitalize_all (bool, optional): whether to capitalize all letters or just the first letter. Defaults to False.
+        capitalize_all (bool, optional): whether to capitalize all letters. Defaults to False.
 
     Returns:
-        list: list of capitalized strings
+        list: list of strings with capitalized letters. 
     """
     new_lst = []
     for string in lst:
@@ -51,7 +51,6 @@ def capitalize_strings(lst, capitalize_all=False):
     return new_lst
 
 
-
 if __name__ == "__main__":
     # Testing sum_even:
     lst = [1, 2, 3, 4, 5, 6]
@@ -60,7 +59,6 @@ if __name__ == "__main__":
 
     # Testing capitalize_strings:
     lst = ["hello", "world", "how", "are", "you"]
-    
+
     print(capitalize_strings(lst))
     print(capitalize_strings(lst, True))
-    
