@@ -2,16 +2,18 @@
 1. Write a function that takes in a list of numbers 
 and returns the sum of all the even numbers in the list.
 The function should have an optional parameter that allows
-the user to specify whether they want to include odd numbers in the sum as well.
+the user to specify whether they want to include odd numbers
+in the sum as well.
 
 2. Write a function that takes in a list of strings 
 and returns a new list with all the strings capitalized. 
 The function should have an optional parameter that allows 
 the user to specify whether they want to capitalize only the 
 first letter of each string or all letters.
-
-
+list = ["hello", "world", "how", "are", "you"] -> ["Hello", "World", "How", "Are", "You"] or ["HELLO",]
+(list:list[str]) -> list[str]
 """
+PI = 3.14
 
 
 def sum_even(lst, include_odd=False):
@@ -26,14 +28,14 @@ def sum_even(lst, include_odd=False):
     """
     sum = 0
     for num in lst:
-        if num % 2 == 0:
+        if num % 2 == 0:  # This means the number is even.
             sum += num
         elif include_odd:
             sum += num
     return sum
 
 
-def capitalize_strings(lst, capitalize_all=False):
+def capitalize_strings(lst, capitalize_all=True):
     """
     Args:
         lst (list): list of strings
@@ -45,9 +47,10 @@ def capitalize_strings(lst, capitalize_all=False):
     new_lst = []
     for string in lst:
         if capitalize_all:
-            new_lst.append(string.upper())
+            new_lst.append(string.upper())  # Hello -> HELLO
         else:
-            new_lst.append(string.capitalize())
+            new_lst.append(string.capitalize())  # hello -> Hello ||  Hello -> Hello
+
     return new_lst
 
 
@@ -55,10 +58,10 @@ if __name__ == "__main__":
     # Testing sum_even:
     lst = [1, 2, 3, 4, 5, 6]
     print(sum_even(lst))
-    print(sum_even(lst, True))
+    print(sum_even(lst, include_odd=True))
 
     # Testing capitalize_strings:
     lst = ["hello", "world", "how", "are", "you"]
 
     print(capitalize_strings(lst))
-    print(capitalize_strings(lst, True))
+    print(capitalize_strings(lst, False))
