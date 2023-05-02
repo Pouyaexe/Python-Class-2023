@@ -13,7 +13,6 @@ first letter of each string or all letters.
 list = ["hello", "world", "how", "are", "you"] -> ["Hello", "World", "How", "Are", "You"] or ["HELLO",]
 (list:list[str]) -> list[str]
 """
-PI = 3.14
 
 
 def sum_even(lst, include_odd=False):
@@ -56,9 +55,14 @@ def capitalize_strings(lst, capitalize_all=True):
 
 if __name__ == "__main__":
     # Testing sum_even:
-    lst = [1, 2, 3, 4, 5, 6]
-    print(sum_even(lst))
-    print(sum_even(lst, include_odd=True))
+    list_of_numbers = [1, 2, 3, 4, 5, 6]
+    print(sum_even(lst=list_of_numbers))
+    print(
+        sum_even(
+            include_odd=True,
+            lst=list_of_numbers,
+        )
+    )
 
     # Testing capitalize_strings:
     lst = ["hello", "world", "how", "are", "you"]
