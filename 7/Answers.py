@@ -40,7 +40,7 @@ def capitalize_strings(lst, capitalize_all=False):
         capitalize_all (bool, optional): whether to capitalize all letters. Defaults to False.
 
     Returns:
-        list: list of strings with capitalized letters. 
+        list: list of strings with capitalized letters.
     """
     new_lst = []
     for string in lst:
