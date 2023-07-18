@@ -1,83 +1,88 @@
-## Homework: Vehicle Rental System
+Homework Title: Shape Hierarchy, Method Overriding, and Perimeter Calculation
 
-You are tasked with creating classes to represent vehicles in a rental system. There are two types of vehicles: cars and bikes. Both car and bike classes should inherit from the Vehicle class provided below. Your task is to implement the Car and Bike classes and complete the given instructions.
+## Problem Statement
 
-Use the following code as a starting point for your parent Vehicle class:
+You are tasked with designing a Python program to represent different shapes using classes and objects. The program should demonstrate the concept of inheritance, method overriding, and include a method to calculate the perimeter of each shape.
 
+**Base Class:**
+
+Create a base class called "Shape" that contains the following attributes and methods:
+
+Attributes:
+- `name`: A string representing the name of the shape.
+- `color`: A string representing the color of the shape.
+
+Methods:
+- `__init__(self, name, color)`: Initializes the `name` and `color` attributes with the provided values.
+- `area(self)`: A placeholder method that calculates and returns the area of the shape. Since the base class does not have any specific shape, the area calculation is not defined here.
+- `perimeter(self)`: A placeholder method that calculates and returns the perimeter of the shape. Since the base class does not have any specific shape, the perimeter calculation is not defined here.
+
+**Derived Classes:**
+
+Create the following derived classes, each representing a specific shape. Each derived class should inherit from the base class "Shape" and implement the necessary attributes and methods.
+
+1. Rectangle:
+Attributes:
+- `length`: A float representing the length of the rectangle.
+- `width`: A float representing the width of the rectangle.
+
+Methods:
+- `area(self)`: Overrides the `area` method from the base class and calculates and returns the area of the rectangle (length * width).
+- `perimeter(self)`: Overrides the `perimeter` method from the base class and calculates and returns the perimeter of the rectangle (2 * (length + width)).
+
+2. Circle:
+Attributes:
+- `radius`: A float representing the radius of the circle.
+
+Methods:
+- `area(self)`: Overrides the `area` method from the base class and calculates and returns the area of the circle (π * radius^2).
+- `perimeter(self)`: Overrides the `perimeter` method from the base class and calculates and returns the perimeter of the circle (2 * π * radius).
+
+3. Triangle:
+Attributes:
+- `side1`: A float representing the length of the first side of the triangle.
+- `side2`: A float representing the length of the second side of the triangle.
+- `side3`: A float representing the length of the third side of the triangle.
+
+Methods:
+- `area(self)`: Overrides the `area` method from the base class and calculates and returns the area of the triangle using Heron's formula.
+- `perimeter(self)`: Overrides the `perimeter` method from the base class and calculates and returns the perimeter of the triangle (side1 + side2 + side3).
+
+**Instructions:**
+
+1. Define the "Shape" class with the specified attributes and methods.
+2. Implement the derived classes: "Rectangle," "Circle," and "Triangle," inheriting from the "Shape" class.
+3. Override the `area` and `perimeter` methods in each derived class to calculate and return the respective shape's area and perimeter.
+4. Test your implementation by creating instances of each shape and displaying their names, colors, areas, and perimeters.
+5. Ensure that the program demonstrates the concept of inheritance, method overriding, and calculates the areas and perimeters correctly for each shape.
+
+**Note:** You can use the value of π as 3.14159 for simplicity.
+
+**Sample Output:**
 ```python
-class Vehicle:
-    def __init__(self, name, max_speed, mileage):
-        self.name = name
-        self.max_speed = max_speed
-        self.mileage = mileage
+# Creating instances of each shape
+rectangle = Rectangle("Rectangle", "Blue", 5.0, 3.0)
+circle = Circle("Circle", "Red", 2.5)
+triangle = Triangle("Triangle", "Green", 4.0, 6.0, 5.0)
 
-    def seating_capacity(self, capacity):
-        return f"The seating capacity of a {self.name} is {capacity} passengers"
+# Displaying shape information, area, and perimeter
+print(rectangle.name)
+print(rectangle.color)
+print(rectangle.area())  # Output: 15.0
+print(rectangle.perimeter())  # Output: 16.0
+
+print(circle.name)
+print(circle.color)
+print(circle.area())  # Output: 19.63495
+print(circle.perimeter())  # Output: 15.70795
+
+print(triangle.name)
+print(triangle.color)
+print(triangle.area())  # Output: 9.92156
+print(triangle.perimeter())  # Output: 15.0
 ```
 
-Instructions:
-1. Create a Car class that inherits from the Vehicle class.
-2. Implement the `__init__` method in the Car class. It should take the following arguments:
-   - `name` (string): The name of the car.
-   - `max_speed` (float): The maximum speed of the car.
-   - `mileage` (float): The mileage (fuel efficiency) of the car.
-   - `rental_price` (float): The rental price per day for the car.
-   - `is_available` (bool): A flag indicating whether the car is available for rent or not. By default, it should be set to `True`.
-3. Implement the `get_rental_price` method in the Car class. It should return the rental price of the car per day.
-4. Implement the `is_rentable` method in the Car class. It should return `True` if the car is available for rent, and `False` otherwise.
-5. Implement the `start_engine` method in the Car class. It should print a message indicating that the car's engine has started.
-6. Implement the `stop_engine` method in the Car class. It should print a message indicating that the car's engine has stopped.
-7. Create a Bike class that inherits from the Vehicle class.
-8. Implement the `__init__` method in the Bike class. It should take the following arguments:
-   - `name` (string): The name of the bike.
-   - `max_speed` (float): The maximum speed of the bike.
-   - `mileage` (float): The mileage (fuel efficiency) of the bike.
-   - `rental_price` (float): The rental price per day for the bike.
-   - `is_available` (bool): A flag indicating whether the bike is available for rent or not. By default, it should be set to `True`.
-9. Implement the `get_rental_price` method in the Bike class. It should return the rental price of the bike per day.
-10. Implement the `is_rentable` method in the Bike class. It should return `True` if the bike is available for rent, and `False` otherwise.
-11. Implement the `ring_bell` method in the Bike class. It should print a message indicating that the bike's bell is ringing.
-12. Test your implementation by creating instances of the Car and Bike classes and calling the methods on them. Print the results to verify the correctness of your code.
-
-**Note:** You are only required to implement the Car and Bike classes. The provided Vehicle class should not be modified.
-
-### Example Usage:
-
-```python
-# Create an instance of the Car class
-car1 = Car("Toyota Camry", 180, 35.5, 50.0, True)
-
-# Test the get_rental_price method
-print(car1.get_rental_price())  # Output: 50.0
-
-# Test the is_rentable method
-print(car1.is_rentable())  # Output: True
-
-# Test the seating_capacity method inherited from the Vehicle class
-print(car1.seating_capacity(5))  # Output: The seating capacity of a Toyota Camry is 5 passengers
-
-# Test the start_engine method specific to the Car class
-car1.start_engine()  # Output: The engine of the Toyota Camry has started
-
-# Create an instance of the Bike class
-bike1 = Bike("Mountain Bike", 30, 15.0, 25.0, False)
-
-# Test the get_rental_price method of the Bike class
-print(bike1.get_rental_price())  # Output: 25.0
-
-# Test the is_rentable method of the Bike class
-print(bike1.is_rentable())  # Output: False
-
-# Test the seating_capacity method inherited from the Vehicle class for the Bike class
-print(bike1.seating_capacity(1))  # Output: The seating capacity of a Mountain Bike is 1 passenger
-
-# Test the ring_bell method specific to the Bike class
-bike1.ring_bell()  # Output: The bell of the Mountain Bike is ringing
-```
-
-**Note:** The above example assumes that the Car and Bike classes are implemented correctly. The output may vary if there are errors in the implementation.
-
-Remember to test your code with different scenarios and edge cases to ensure its correctness.
+In the above example, we create instances of the derived classes, set their attributes (including the name and color inherited from the base class), and calculate their respective areas and perimeters using the overridden `area` and `perimeter` methods in each derived class.
 
 Good luck!
 
