@@ -1,6 +1,4 @@
-Homework Title: Shape Hierarchy, Method Overriding, and Perimeter Calculation
-
-## Problem Statement
+Problem Statement
 
 You are tasked with designing a Python program to represent different shapes using classes and objects. The program should demonstrate the concept of inheritance, method overriding, and include a method to calculate the perimeter of each shape.
 
