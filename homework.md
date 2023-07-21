@@ -9,10 +9,12 @@ You are tasked with designing a Python program to represent different shapes usi
 Create a base class called "Shape" that contains the following attributes and methods:
 
 Attributes:
+
 - `name`: A string representing the name of the shape.
 - `color`: A string representing the color of the shape.
 
 Methods:
+
 - `__init__(self, name, color)`: Initializes the `name` and `color` attributes with the provided values.
 - `area(self)`: A placeholder method that calculates and returns the area of the shape. Since the base class does not have any specific shape, the area calculation is not defined here.
 - `perimeter(self)`: A placeholder method that calculates and returns the perimeter of the shape. Since the base class does not have any specific shape, the perimeter calculation is not defined here.
@@ -22,29 +24,35 @@ Methods:
 Create the following derived classes, each representing a specific shape. Each derived class should inherit from the base class "Shape" and implement the necessary attributes and methods.
 
 1. Rectangle:
-Attributes:
+   Attributes:
+
 - `length`: A float representing the length of the rectangle.
 - `width`: A float representing the width of the rectangle.
 
 Methods:
+
 - `area(self)`: Overrides the `area` method from the base class and calculates and returns the area of the rectangle (length * width).
 - `perimeter(self)`: Overrides the `perimeter` method from the base class and calculates and returns the perimeter of the rectangle (2 * (length + width)).
 
 2. Circle:
-Attributes:
+   Attributes:
+
 - `radius`: A float representing the radius of the circle.
 
 Methods:
+
 - `area(self)`: Overrides the `area` method from the base class and calculates and returns the area of the circle (π * radius^2).
 - `perimeter(self)`: Overrides the `perimeter` method from the base class and calculates and returns the perimeter of the circle (2 * π * radius).
 
 3. Triangle:
-Attributes:
+   Attributes:
+
 - `side1`: A float representing the length of the first side of the triangle.
 - `side2`: A float representing the length of the second side of the triangle.
 - `side3`: A float representing the length of the third side of the triangle.
 
 Methods:
+
 - `area(self)`: Overrides the `area` method from the base class and calculates and returns the area of the triangle using Heron's formula.
 - `perimeter(self)`: Overrides the `perimeter` method from the base class and calculates and returns the perimeter of the triangle (side1 + side2 + side3).
 
@@ -59,6 +67,7 @@ Methods:
 **Note:** You can use the value of π as 3.14159 for simplicity.
 
 **Sample Output:**
+
 ```python
 # Creating instances of each shape
 rectangle = Rectangle("Rectangle", "Blue", 5.0, 3.0)
