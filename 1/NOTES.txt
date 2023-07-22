@@ -1,5 +1,0 @@
-.cpp --> .exe
-.py 
-
-Anaconda GUI
-Conda CLI
