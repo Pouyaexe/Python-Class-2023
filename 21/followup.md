@@ -22,7 +22,7 @@ Instructions:
 Sample Output:
 
 ```python
-isosceles_triangle = IsoscelesTriangle("Isosceles", "Purple", 5.0, 4.0, 4.0)
+isosceles_triangle = IsoscelesTriangle("Isosceles", "Purple", 5.0, 4.0)
 equilateral_triangle = EquilateralTriangle("Equilateral", "Yellow", 6.0)
 
 print(isosceles_triangle.name)
