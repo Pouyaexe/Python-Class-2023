@@ -4,8 +4,6 @@ class Task:
         self.is_star = False 
         self.is_completed = False 
 
-    def task_complete(self):
-        self.is_completed = True
   
 
 task1 = Task("milk")
