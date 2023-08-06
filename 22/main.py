@@ -31,16 +31,16 @@ print(task1.is_completed)
 
 
 
-# todo_list_2 = []
+todo_list_2 = []
 
-# task3 = "Buying Milk"
-# task4 = "Studying"
+task3 = "Buying Milk"
+task4 = "Studying"
 
-# todo_list_2.append(task3)
-# todo_list_2.append(task4)
+todo_list_2.append(task3)
+todo_list_2.append(task4)
 
-# def task_func(todolist:list, newtask:str):
-#     todolist.append(newtask)
-#     return todolist
+def task_func(todolist:list, newtask:str):
+    todolist.append(newtask)
+    return todolist
 
-# print(todo_list_2)
+print(todo_list_2)
