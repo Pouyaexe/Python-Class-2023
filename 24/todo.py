@@ -21,7 +21,11 @@ class Task:
 tasks = []
 
 while True:
-    
+    if len(tasks) > 0:   
+        print("--- ToDOs: ---")
+        for index, task in enumerate(tasks):
+            print(f"{index + 1}. {task}")
+        
     print("--- To-Do List Manager ---")
     print("1. Add Task")
     print("2. Edit Task")
@@ -57,8 +61,8 @@ while True:
     
     elif choice == "4":
         print("To-Do List:")
-        for task in tasks:
-            print(task)
+        for index, task in enumerate(tasks):
+            print(f"{index + 1}. {task}")
             
     elif choice == "5":
         print("Exiting the To-Do List Manager.")
