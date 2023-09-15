@@ -15,9 +15,8 @@ class Task:
         if self.status:
             return self.name + " - "+ self.description + " [(Completed)]"
         else:
-            return self.name + " - "+ self.description + " [(Not Completed)]"
+            return self.name + " - "+ self.description + " [(Not Completed)]"    
 
-        
 tasks = []
 
 while True:
