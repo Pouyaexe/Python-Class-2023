@@ -1,7 +1,7 @@
 
 # Python and Machine Learning Course
 
-This repository contains the course materials for a Python and Machine Learning course. The course is designed for students who have little to no programming experience and want to learn Python and Machine Learning.
+This repository contains the course materials for a Python and Machine Learning course. The course is designed for students who have little to no programming experience and want to learn Python and Machine Learning. 
 
 ## Course Structure
 
